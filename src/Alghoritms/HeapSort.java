@@ -1,4 +1,4 @@
- package Alghoritms;
+package Alghoritms;
 
 public class HeapSort
 {
@@ -9,17 +9,18 @@ public class HeapSort
     // Build heap
     for (int i = n / 2 - 1; i >= 0; i--)
       heapify(arr, n, i);
-    printArray(arr);
+
 
     // extract an element from heap
     for (int i=n-1; i>=0; i--)
     {
       // Move current root to end
       int temp = arr[0];
+      //printArray(arr);
       arr[0] = arr[i];
-      printArray(arr);
+      //printArray(arr);
       arr[i] = temp;
-      printArray(arr);
+      //printArray(arr);
 
       // call max heapify on the reduced heap
       heapify(arr, i, 0);
@@ -65,7 +66,7 @@ public class HeapSort
 
     public static void main(String args[])
   {
-    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr[] = {4, 10, 3, 5, 1,};
     int n = arr.length;
 
     HeapSort ob = new HeapSort();
