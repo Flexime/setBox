@@ -1,4 +1,4 @@
-package Cyphers;
+package Ciphers;
 
 public class IterativeMethod {
 
