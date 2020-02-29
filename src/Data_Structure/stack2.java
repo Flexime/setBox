@@ -31,7 +31,7 @@ public class stack2 {
 
   static void showpop(Stack s ) {
 
-    System.out.println("stack" +s);
+    System.out.println("Data_Structure.stack" +s);
   }
   public static void main(String[] args) {
 
@@ -57,7 +57,7 @@ public class stack2 {
         showpop(second);
     //Write down code to swap elements of stacks
 
-    //For exapmple, 1-st element of first stack replaces with 1-st element of second stack
+    //For exapmple, 1-st element of first Data_Structure.stack replaces with 1-st element of second Data_Structure.stack
 
     //Print swapped stacks using “show” function you wrote
 
