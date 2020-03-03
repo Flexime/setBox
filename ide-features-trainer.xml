@@ -7,6 +7,7 @@
       <map>
         <entry key="Actions" value="NOT_PASSED" />
         <entry key="Basic Completion" value="NOT_PASSED" />
+        <entry key="Basic Navigation" value="NOT_PASSED" />
         <entry key="Class Search" value="NOT_PASSED" />
         <entry key="CodeAssistance.CodeFormatting" value="NOT_PASSED" />
         <entry key="CodeAssistance.EditorCodingAssistance" value="NOT_PASSED" />
@@ -15,8 +16,11 @@
         <entry key="Collapse" value="NOT_PASSED" />
         <entry key="Comment Line" value="NOT_PASSED" />
         <entry key="Completion with Tab" value="NOT_PASSED" />
+        <entry key="Completions.CompletionwithTab" value="NOT_PASSED" />
+        <entry key="Completions.StatementCompletion" value="NOT_PASSED" />
         <entry key="Declaration and usages" value="NOT_PASSED" />
         <entry key="Duplicate" value="NOT_PASSED" />
+        <entry key="EditorBasics.CommentLine" value="NOT_PASSED" />
         <entry key="EditorBasics.DeleteLine" value="NOT_PASSED" />
         <entry key="EditorBasics.Selection" value="NOT_PASSED" />
         <entry key="Extract Method" value="NOT_PASSED" />
