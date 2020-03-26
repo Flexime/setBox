@@ -1,6 +1,6 @@
 package Math;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
 
 //spline of 1st order
 public class spline {
@@ -21,32 +21,32 @@ public class spline {
 
     public static void main(String[] args) {
 
-            double N = 10;
-            int i = 0;
-            double xi;
+        double N = 10;
+        int i = 0;
+        double xi;
 
 
-            double a = 0;
-            double b = 1;
-            double h = (b - a) / N; // h is delta
+        double a = 0;
+        double b = 1;
+        double h = (b - a) / N; // h is delta
 
 
-            xi = a + i * h;
-            double yi = funcx(xi);
+        xi = a + i * h;
+        double yi = funcx(xi);
 
-            i++;
+        i++;
 
-            double xi1 = a + i * h;
-            double yi1 = funcx(xi);
+        double xi1 = a + i * h;
+        double yi1 = funcx(xi);
 
-            double f = f(xi, h);
+        double f = f(xi, h);
 
-            double S = spline_1st_order(xi, yi, xi1, yi1, h);
-            double deltai = f - S;
-            System.out.println(deltai);
-            double A = 1 / N * (f - S);
-            System.out.println(A);
-            double sig = Math.sqrt(1 / N - 1 * Math.pow(deltai - A, 2));
-            System.out.println(sig);
-        }
+        double S = spline_1st_order(xi, yi, xi1, yi1, h);
+        double deltai = f - S;
+        System.out.println(deltai);
+        double A = 1 / N * (f - S);
+        System.out.println(A);
+        double sig = Math.sqrt(1 / N - 1 * Math.pow(deltai - A, 2));
+        System.out.println(sig);
     }
+}
