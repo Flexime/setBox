@@ -34,12 +34,12 @@ class QuickSort
     {
         if (low < high)
         {
-            /* pi is partitioning index, arr[pi] is now at right place */
+            /* pi is partitioning index */
 
             int pi = partition(arr, low, high);
 
-            /* Recursively sort elements
-            before partition and after partition*/
+            /* Recursively sort elements*/
+
             sort(arr, low, pi-1);
             sort(arr, pi+1, high);
         }
@@ -56,13 +56,13 @@ class QuickSort
 
     public static void main(String args[])
     {
-        int arr[] = {6,5,10,5,4,3,2,10,16};
+        int arr[] = {4,2,6,5,3,9};
         int n = arr.length;
 
         QuickSort ob = new QuickSort();
         ob.sort(arr, 0, n-1);
 
-        System.out.println("sorted array");
+        System.out.println("sorted array: ");
         printArray(arr);
     }
 }

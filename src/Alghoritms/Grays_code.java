@@ -1,9 +1,7 @@
 package Alghoritms;
 
+import java.util.*;
 
-        import org.w3c.dom.ls.LSOutput;
-
-        import java.util.*;
 class  Grays_code {
     static void generateGrayarr(int n,ArrayList<String>  arr) {
         if (n <= 0)
