@@ -3,9 +3,9 @@ package Alghoritms;
 class QuickSort
 {
 
-    int partition(int arr[], int low, int high)
+    int partition(double[] arr, int low, int high)
     {
-        int pivot = arr[high];
+        double pivot = arr[high];
         int i = (low-1); // index of smaller element
         for (int j=low; j<high; j++)
         {
@@ -14,13 +14,13 @@ class QuickSort
             {
                 i++;
 
-                int temp = arr[i];
+                double temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
         }
 
-        int temp = arr[i+1];
+        double temp = arr[i+1];
         arr[i+1] = arr[high];
         arr[high] = temp;
 
@@ -30,7 +30,7 @@ class QuickSort
 
     /* low  start
        high end  */
-    void sort(int arr[], int low, int high)
+    void sort(double[] arr, int low, int high)
     {
         if (low < high)
         {
@@ -45,8 +45,16 @@ class QuickSort
         }
     }
 
+  public static double[] randarr(double[] arr, double N){
 
-    static void printArray(int arr[])
+      for (int i =0; i<arr.length;i++){
+            arr[i] = (int) (Math.random()*N);
+        }
+        return arr;
+  }
+
+
+    static void printArray(double[] arr)
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
@@ -54,9 +62,12 @@ class QuickSort
         System.out.println();
     }
 
+
     public static void main(String args[])
     {
-        int arr[] = {4,2,6,5,3,9};
+        double N = Math.pow(10,6);
+         double [] arr = new double[(int) N];
+        randarr(arr,N);
         int n = arr.length;
 
         QuickSort ob = new QuickSort();

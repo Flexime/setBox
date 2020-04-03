@@ -37,7 +37,7 @@ public class spline2 {
 
     public static void main(String[] args) {
 
-        int N = 10;// 10 30 50 70 100 150
+        int N = 150;// 10 30 50 70 100 150
         int a =0;
         double  b =Math.PI ;
         double deltax = b-a/N;
