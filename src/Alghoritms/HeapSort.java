@@ -2,7 +2,7 @@ package Alghoritms;
 
 public class HeapSort
 {
-  public void sort(int arr[])
+  public void sort(int arr[]) //0(n)
   {
     int n = arr.length;
 
@@ -11,16 +11,13 @@ public class HeapSort
       heapify(arr, n, i);
 
 
-    // extract an element from heap
+    // extract an element from heap //
     for (int i=n-1; i>=0; i--)
     {
       // Move current root to end
       int temp = arr[0];
-      //printArray(arr);
       arr[0] = arr[i];
-      //printArray(arr);
       arr[i] = temp;
-      //printArray(arr);
 
       // call max heapify on the reduced heap
       heapify(arr, i, 0);
@@ -29,9 +26,9 @@ public class HeapSort
 
   // To heapify a subtree rooted with node i which is
   // an index in arr[]. n is size of heap
-  void heapify(int arr[], int n, int i)
+  void heapify(int arr[], int n, int i) //0 (logn)
   {
-    int largest = i; // Initialize largest as root             n(0)
+    int largest = i; // Initialize largest as root             n(0  )
     int l = 2*i + 1; // left = 2*i + 1                      /      \
     int r = 2*i + 2; // right = 2*i + 2                  2n-1(1)   2n+2(2)
 

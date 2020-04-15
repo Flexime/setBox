@@ -3,9 +3,9 @@ package Alghoritms;
 class QuickSort
 {
 
-    int partition(int arr[], int low, int high)
+    int partition(double[] arr, int low, int high)
     {
-        int pivot = arr[high];
+        double pivot = arr[high];
         int i = (low-1); // index of smaller element
         for (int j=low; j<high; j++)
         {
@@ -14,13 +14,13 @@ class QuickSort
             {
                 i++;
 
-                int temp = arr[i];
+                double temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
         }
 
-        int temp = arr[i+1];
+        double temp = arr[i+1];
         arr[i+1] = arr[high];
         arr[high] = temp;
 
@@ -30,23 +30,31 @@ class QuickSort
 
     /* low  start
        high end  */
-    void sort(int arr[], int low, int high)
+    void sort(double[] arr, int low, int high)
     {
         if (low < high)
         {
-            /* pi is partitioning index, arr[pi] is now at right place */
+            /* pi is partitioning index */
 
             int pi = partition(arr, low, high);
 
-            /* Recursively sort elements
-            before partition and after partition*/
+            /* Recursively sort elements*/
+
             sort(arr, low, pi-1);
             sort(arr, pi+1, high);
         }
     }
 
+  public static double[] randarr(double[] arr, double N){
 
-    static void printArray(int arr[])
+      for (int i =0; i<arr.length;i++){
+            arr[i] = (int) (Math.random()*N);
+        }
+        return arr;
+  }
+
+
+    static void printArray(double[] arr)
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
@@ -54,15 +62,18 @@ class QuickSort
         System.out.println();
     }
 
+
     public static void main(String args[])
     {
-        int arr[] = {6,5,10,5,4,3,2,10,16};
+        double N = Math.pow(10,6);
+         double [] arr = new double[(int) N];
+        randarr(arr,N);
         int n = arr.length;
 
         QuickSort ob = new QuickSort();
         ob.sort(arr, 0, n-1);
 
-        System.out.println("sorted array");
+        System.out.println("sorted array: ");
         printArray(arr);
     }
 }
