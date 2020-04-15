@@ -24,7 +24,7 @@ class Newton {
     {
         double h = func(x) / derivFunc(x);
         /**3**/
-        while (Math.abs(h) >= EPSILON)
+        while (Math.abs(h) >= EPSILON )
         {
 
             h = func(x) / derivFunc(x);
@@ -37,6 +37,7 @@ class Newton {
 
         System.out.print("The value of the"+ " root is : "
                 + Math.round(x * 100.0) / 100.0);
+
     }
 
 

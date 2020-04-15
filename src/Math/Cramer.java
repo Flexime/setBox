@@ -79,8 +79,8 @@ public class Cramer {
     {
         // storing coefficients of linear equations in coeff matrix
         double coeff[][] = {{ 2, 4, 1, 6 },
-                { 3, 2, -1, 5 },
-                { 2, -2, 3, 0 }};
+                            { 3, 2, -1, 5 },
+                            { 2 ,-2, 3, 0 }};
         findSolution(coeff);
     }
 }
