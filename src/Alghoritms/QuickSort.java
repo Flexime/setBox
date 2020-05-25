@@ -13,13 +13,14 @@ class QuickSort
             if (arr[j] < pivot)
             {
                 i++;
-
+                //swap i j
                 double temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
         }
 
+        // swap i+1 high or pivot
         double temp = arr[i+1];
         arr[i+1] = arr[high];
         arr[high] = temp;
@@ -28,8 +29,8 @@ class QuickSort
     }
 
 
-    /* low  start
-       high end  */
+    /* low  start index
+       high end index  */
     void sort(double[] arr, int low, int high)
     {
         if (low < high)

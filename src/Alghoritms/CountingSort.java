@@ -51,5 +51,7 @@ public class CountingSort {
 
 
     }
+     // max
+    //  0000 00 0 0 0 0
 }
 

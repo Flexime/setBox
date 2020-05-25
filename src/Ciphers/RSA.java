@@ -56,11 +56,14 @@ public class RSA {
         BigInteger p = new BigInteger(bitlen / 2, 100, r);
         BigInteger q = new BigInteger(bitlen / 2, 100, r);
         n = p.multiply(q);
-        BigInteger m = (p.subtract(BigInteger.ONE))
-                .multiply(q.subtract(BigInteger.ONE));
+        BigInteger m = (p.subtract(BigInteger.ONE)).multiply(q.subtract(BigInteger.ONE));
         e = new BigInteger("3");
-        while(m.gcd(e).intValue() > 1) e = e.add(new BigInteger("2"));
+        while(m.gcd(e).intValue() > 1) e = e.add(new BigInteger("2")); // de = % m = 1
         d = e.modInverse(m);
+        System.out.println("\n Public keys  n: " + n );
+        System.out.println("\n e : " + e );
+        System.out.println("\n Secret key d:  " + d );
+
 
     }
     public  BigInteger encrypt(BigInteger message)
@@ -74,7 +77,7 @@ public class RSA {
 
     public static void main(String[] args) {
         // bitlen 2^x
-        RSA rsa = new RSA(2048);
+        RSA rsa = new RSA(1024);
         //prepare plain text
         String msg = "fox is cute";
         BigInteger plaintext = new BigInteger(msg.getBytes());
