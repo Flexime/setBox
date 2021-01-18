@@ -82,5 +82,10 @@ public class Cramer {
                             { 3, 2, -1, 5 },
                             { 2 ,-2, 3, 0 }};
         findSolution(coeff);
+
+
+
+
     }
+
 }

@@ -1,0 +1,15 @@
+KIA in
+BMW in
+Mercedes in
+Subaru in
+KIA out
+Toyota in
+Lada in
+Mercedes out
+Audi in
+Nissan in
+BMW out
+Subaru out
+Lada out
+Toyota out
+Audi out

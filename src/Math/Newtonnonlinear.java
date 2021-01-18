@@ -14,9 +14,6 @@ public class Newtonnonlinear {
         return inverse;
         // inverse [J]^-1
     }
-
-
-
     static double funcx(double x1, double x2) //f1
     {
         return x1 - x2 + 1;
@@ -30,9 +27,7 @@ public class Newtonnonlinear {
     // (x1 x2 ) -J[]^-1  (f1 f2)
     static void findSolution(double inverse [][], double b[][],double x1,double x2) {
 
-
         //-J[]^-1  (f1 f2) vector by matrix
-
         double VbM[][] = {
                 {funcx(x1, x2) * inverse[0][0] , funcx(x1, x2) * inverse[1][0]},
                 {funcy(x1, x2) * inverse[0][1] , funcy(x1, x2) * inverse[1][1]}
@@ -66,4 +61,6 @@ public class Newtonnonlinear {
         };
 
         findSolution(determinantOfMatrix(jacobian), b, x1, x2);
+
+
     }}
